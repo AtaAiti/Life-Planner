@@ -1,94 +1,51 @@
 # Life-Planner — Comprehensive Life & Task Management Platform
 
-Life-Planner is a modern, fast, and intuitive web application designed to help users organize their entire life in one place. Seamlessly manage your tasks, projects, habits, and calendar events while tracking progress with beautiful visualizations and meaningful insights. Built for productivity enthusiasts who value simplicity and performance.
+**Life-Planner** is a modern, fast, and intuitive web application designed to help users organize their entire life in one place. Seamlessly manage your tasks, projects, habits, and calendar events while tracking progress with beautiful visualizations and meaningful insights. Built for productivity enthusiasts who value simplicity and performance.
 
-## 🏗️ Project Architecture
+## ✨ Features
 
-Life-Planner is a single-page application (SPA) built with modern web technologies and best practices for code organization and maintainability.
+- 📝 **Task Management** — Create, organize, and track tasks with priorities and due dates
+- 🎯 **Project Management** — Group tasks into projects and monitor progress
+- 🔥 **Habit Tracking** — Build habits with streak counting and daily reminders
+- 📅 **Calendar Integration** — Visualize events, tasks, and habits in calendar view
+- 📊 **Dashboard** — Get an overview of your entire life at a glance
+- 🌙 **Dark Mode** — Easy on the eyes with built-in light/dark theme support
+- ⚡ **Blazing Fast** — Instant loading, smooth interactions, offline-first
+- 💾 **Local Storage** — All data stored locally on your device
 
-**Core Structure:**
-- `src/pages/` — Main page components (Dashboard, Tasks, Projects, Habits, Calendar)
-- `src/components/` — Reusable UI components (layout, shared widgets)
-- `src/store/` — Centralized state management using Zustand
-- `src/utils/` — Helper functions and utilities
-- `src/types.ts` — TypeScript type definitions
-- `dist/` — Production build output
-
-## 💻 Tech Stack
-
-**Frontend Hub**
-- **Framework:** React 19.1.0 with TypeScript
-- **Build Tool:** Vite 6.3.5 (lightning-fast bundling & HMR)
-- **Styling:** Tailwind CSS 3.4.17 with PostCSS & Autoprefixer
-- **State Management:** Zustand 5.0.4 (lightweight & intuitive)
-- **Routing:** React Router DOM 7.6.0
-- **Date Utilities:** date-fns 4.1.0 (modern date handling)
-- **Icons:** Lucide React 0.511.0 (beautiful, consistent icons)
-- **Utilities:** clsx 2.1.1 (conditional className composition)
-
-**Type Safety**
-- Strict TypeScript 5.8.3 configuration
-- Full type coverage across all modules
-- Enhanced IntelliSense and IDE support
-
-**Key Features**
-- ✅ Task Management — Create, organize, and track tasks with priority levels
-- 📋 Project Management — Group tasks into projects for better organization
-- 🎯 Habit Tracking — Build and monitor daily/weekly habits
-- 📅 Calendar Integration — Visualize tasks and events on an interactive calendar
-- 📊 Dashboard Insights — Real-time statistics and progress overview
-- 💾 Persistent Storage — Local storage integration for data persistence
-- 📱 Responsive Design — Fully responsive UI for desktop and mobile devices
-- 🎨 Modern UI — Clean, accessible design with Tailwind CSS
-
-## 🚀 How to Run the Project Locally
+## 🚀 Quick Start
 
 ### Prerequisites
-- **Node.js:** v18 or higher
-- **npm:** v9 or higher (comes with Node.js)
+- Node.js >= 18.0.0
+- npm >= 9.0.0
 
-### 1. Clone the Repository
+### Installation
 
+1. **Clone the repository**
 ```bash
-git clone https://github.com/AtaAiti/Life-Planner.git
-cd Life-Planner
+git clone https://github.com/Aiatulla/life-planner.git
+cd life-planner
 ```
 
-### 2. Install Dependencies
-
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-### 3. Run the Development Server
-
+3. **Start the development server**
 ```bash
 npm run dev
 ```
+The app will open at `http://localhost:5173`
 
-The application will spin up on **http://localhost:5173** (Vite's default port). The development server includes:
-- Hot Module Replacement (HMR) for instant updates
-- TypeScript compilation with error reporting
-- Tailwind CSS JIT compilation
-
-### 4. Build for Production
+## 📦 Build for Production
 
 ```bash
-npm run build
+npm run build        # Create optimized production build
+npm run preview      # Preview the production build locally
 ```
 
-This command:
-- Compiles TypeScript (`tsc -b`)
-- Bundles the application with Vite (`vite build`)
-- Outputs optimized files to the `dist/` directory
-
-### 5. Preview the Production Build
-
-```bash
-npm run preview
-```
-
-Serves the production build locally for testing before deployment.
+The production-ready files will be in the `/dist` directory.
 
 ## 📁 Project Structure
 

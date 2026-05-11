@@ -494,14 +494,14 @@ export const ProjectsPage = () => {
               type="text"
               value={taskFormData.title}
               onChange={(e) => setTaskFormData({ ...taskFormData, title: e.target.value })}
-              placeholder="Name of task задачи"
+              placeholder="Name of task"
               className="w-full rounded-xl border border-stone-300 bg-transparent px-3 py-2 outline-none focus:border-app-lightAccent dark:border-stone-700 dark:focus:border-app-darkAccent"
               autoFocus
             />
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-sm font-medium">Приоритет</label>
+                <label className="text-sm font-medium">Priority</label>
                 <select
                   value={taskFormData.priority}
                   onChange={(e) => setTaskFormData({ ...taskFormData, priority: Number(e.target.value) as Priority })}
@@ -515,7 +515,7 @@ export const ProjectsPage = () => {
               </div>
 
               <div className="space-y-1">
-                <label className="text-sm font-medium">Проект</label>
+                <label className="text-sm font-medium">Project</label>
                 <select
                   value={taskFormData.projectId || ""}
                   onChange={(e) => setTaskFormData({ ...taskFormData, projectId: e.target.value || null })}
@@ -546,13 +546,13 @@ export const ProjectsPage = () => {
                 onClick={() => setShowCreateTaskModal(false)}
                 className="flex-1 rounded-xl border border-stone-300 px-4 py-2 font-medium transition active:scale-[0.97] dark:border-stone-700"
               >
-                Отмена
+                Cancel
               </button>
               <button
                 onClick={handleSaveTask}
                 className="flex-1 rounded-xl bg-app-lightAccent px-4 py-2 font-medium text-stone-900 transition active:scale-[0.97] dark:bg-app-darkAccent"
               >
-                Создать
+                Create
               </button>
             </div>
           </Card>
@@ -584,7 +584,7 @@ export const ProjectsPage = () => {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-sm font-medium">Приоритет</label>
+                <label className="text-sm font-medium">Priority</label>
                 <select
                   value={taskFormData.priority}
                   onChange={(e) => setTaskFormData({ ...taskFormData, priority: Number(e.target.value) as Priority })}
@@ -598,7 +598,7 @@ export const ProjectsPage = () => {
               </div>
 
               <div className="space-y-1">
-                <label className="text-sm font-medium">Проект</label>
+                <label className="text-sm font-medium">Project</label>
                 <select
                   value={taskFormData.projectId || ""}
                   onChange={(e) => setTaskFormData({ ...taskFormData, projectId: e.target.value || null })}
@@ -629,13 +629,13 @@ export const ProjectsPage = () => {
                 onClick={() => setShowEditTaskModal(false)}
                 className="flex-1 rounded-xl border border-stone-300 px-4 py-2 font-medium transition active:scale-[0.97] dark:border-stone-700"
               >
-                Отмена
+                Cancel
               </button>
               <button
                 onClick={handleSaveTask}
                 className="flex-1 rounded-xl bg-app-lightAccent px-4 py-2 font-medium text-stone-900 transition active:scale-[0.97] dark:bg-app-darkAccent"
               >
-                Сохранить
+                Save
               </button>
             </div>
           </Card>

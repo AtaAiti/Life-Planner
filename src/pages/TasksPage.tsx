@@ -303,7 +303,7 @@ export const TasksPage = () => {
                         >
                           <input
                             type="text"
-                            placeholder="Новая подзадача"
+                            placeholder="New subtask"
                             autoFocus
                             className="flex-1 text-sm rounded-lg border border-stone-300 bg-transparent px-2 py-1 dark:border-stone-700 outline-none focus:border-app-lightAccent dark:focus:border-app-darkAccent"
                           />
@@ -326,7 +326,7 @@ export const TasksPage = () => {
                           onClick={() => setNewSubtaskTaskId(task.id)}
                           className="text-xs text-app-lightAccent dark:text-app-darkAccent hover:underline"
                         >
-                          + Подзадача
+                          + Subtask
                         </button>
                       )}
                     </div>

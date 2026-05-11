@@ -66,15 +66,15 @@ export const HabitsPage = () => {
       <h1 className="font-display text-3xl font-bold">Habits</h1>
       <div className="grid gap-3 md:grid-cols-3">
         <Card>
-          <p className="text-sm text-stone-500">Общий процент</p>
+          <p className="text-sm text-stone-500">General percent</p>
           <p className="text-2xl font-semibold">{overall}%</p>
         </Card>
         <Card>
-          <p className="text-sm text-stone-500">Лучший streak</p>
+          <p className="text-sm text-stone-500">The best streak</p>
           <p className="text-2xl font-semibold">{Math.max(0, ...activeHabits.map((h) => h.streak))}</p>
         </Card>
         <Card>
-          <p className="text-sm text-stone-500">Среднее в неделю</p>
+          <p className="text-sm text-stone-500">Average in the week</p>
           <p className="text-2xl font-semibold">{avgPerWeek}</p>
         </Card>
       </div>
@@ -82,7 +82,7 @@ export const HabitsPage = () => {
         <form onSubmit={onAdd} className="grid gap-2 md:grid-cols-4">
           <input
             name="title"
-            placeholder="Новая привычка"
+            placeholder="New habit"
             className="rounded-xl border border-stone-300 bg-transparent px-3 py-2 dark:border-stone-700"
           />
           <input name="icon" defaultValue="✨" className="rounded-xl border border-stone-300 bg-transparent px-3 py-2 dark:border-stone-700" />
@@ -97,13 +97,13 @@ export const HabitsPage = () => {
               className="w-full rounded-xl border border-stone-300 bg-transparent px-3 py-2 dark:border-stone-700"
             />
             <button className="rounded-xl bg-app-lightAccent px-4 py-2 font-medium text-stone-900 active:scale-[0.97] dark:bg-app-darkAccent">
-              Добавить
+              Add
             </button>
           </div>
         </form>
       </Card>
       {activeHabits.length === 0 ? (
-        <EmptyState title="Привычек пока нет" subtitle="Добавьте первую привычку и отмечайте прогресс каждый день." />
+        <EmptyState title="No habits yet" subtitle="Add a new habit and mark it every day." />
       ) : (
         <div className="grid gap-4 xl:grid-cols-2">
           {activeHabits.map((habit) => {
@@ -116,7 +116,7 @@ export const HabitsPage = () => {
                       {habit.icon} {habit.title}
                     </h2>
                     <p className="text-sm text-stone-500">
-                      Цель: {habit.targetPerWeek} / неделю · streak: {habit.streak}
+                      Goal: {habit.targetPerWeek} / week · streak: {habit.streak}
                     </p>
                   </div>
                   <button
@@ -124,7 +124,7 @@ export const HabitsPage = () => {
                     className="rounded-xl border border-stone-300 px-3 py-2 text-sm active:scale-[0.97] dark:border-stone-700"
                     style={{ borderColor: habit.color }}
                   >
-                    {habit.completedDates.includes(today) ? "Снять" : "Отметить"}
+                    {habit.completedDates.includes(today) ? "Remove" : "Mark"}
                   </button>
                 </div>
                 <ProgressBar value={completionPercent(habit)} />
@@ -145,10 +145,10 @@ export const HabitsPage = () => {
                 </div>
                 <div className="flex gap-2 text-sm">
                   <button onClick={() => toggleHabitArchive(habit.id)} className="rounded-lg border border-stone-300 px-2 py-1 dark:border-stone-700">
-                    В архив
+                    To archive
                   </button>
                   <button onClick={() => removeHabit(habit.id)} className="rounded-lg border border-red-300 px-2 py-1 text-red-600 dark:border-red-600/40">
-                    Удалить
+                    Remove
                   </button>
                 </div>
               </Card>
@@ -158,14 +158,14 @@ export const HabitsPage = () => {
       )}
       {archivedHabits.length > 0 && (
         <Card className="space-y-2">
-          <h2 className="font-display text-xl font-semibold">Архив</h2>
+          <h2 className="font-display text-xl font-semibold">Archive</h2>
           {archivedHabits.map((habit) => (
             <div key={habit.id} className="flex items-center justify-between rounded-xl border border-stone-300 px-3 py-2 dark:border-stone-700">
               <span className="truncate">
                 {habit.icon} {habit.title}
               </span>
               <button onClick={() => toggleHabitArchive(habit.id)} className="text-sm underline">
-                Восстановить
+                Recover
               </button>
             </div>
           ))}

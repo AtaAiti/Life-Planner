@@ -46,7 +46,7 @@ export const Sidebar = () => {
               <span className="max-w-[180px] truncate">{project.name}</span>
             </li>
           ))}
-          {projects.length === 0 && <li className="text-sm text-stone-400">Пока нет проектов</li>}
+          {projects.length === 0 && <li className="text-sm text-stone-400">No projects yet</li>}
         </ul>
       </div>
       <div className="mt-auto flex flex-col gap-2 pt-10">
@@ -62,7 +62,7 @@ export const Sidebar = () => {
           className="flex items-center justify-center gap-2 rounded-xl border border-stone-300 px-3 py-2 text-sm transition active:scale-[0.97] dark:border-stone-700"
         >
           <Download size={16} />
-          Экспорт JSON
+          Export JSON
         </button>
       </div>
     </aside>
